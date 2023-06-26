@@ -1,0 +1,24 @@
+<template>
+    <lightning-button variant="brand" label="Start Sales" title="Start" onclick={handlStart}></lightning-button>
+    <template lwc:if={showPopUp}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-page-header" style="background-color:#3498db;">
+                    <h1><lightning-icon icon-name="action:email" alternative-text="Audio file" title="Audio"></lightning-icon>&nbsp;&nbsp;
+                    <b style="font-size:large;">Email to Customers</b></h1>
+                </div>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-p-around_medium">
+                    <lightning-input label="Email" placeholder="username@example.com" required></lightning-input>
+                    
+                </div>
+            </div>
+            <div class="slds-modal__footer">
+                <lightning-button label="Cancel" title="Cancel" onclick={handlePopUpCancel}></lightning-button>&nbsp;
+                <lightning-button variant="brand" label="Send" title="Send" onclick={handleSend}></lightning-button>
+            </div>
+            </div>
+        </section>
+            <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>
