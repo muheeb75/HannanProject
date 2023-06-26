@@ -27,10 +27,11 @@ export default class Marketing extends LightningElement {
                         variant: 'success',
                         mode: 'dismissable'
                     });
-                    this.dispatchEvent(event);
+                    this.dispatchEvent(event); 
             })
             .catch(error => {
-                // Handle email sending failure
+                // Handle email sending failure 
+                // Handle email sending failure 
                 const event = new ShowToastEvent({
                     title: 'Error',
                     message: 'Some thing went wrong - '+error,
